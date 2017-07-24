@@ -1,0 +1,1017 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Assistance for Websites</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/jquery.js">
+  </script>
+  <script>
+    var images = [];
+	images[0] = "offer1.png";
+	images[1] = "offer2.png";
+	images[2] = "offer3.png";
+	images[3] = "offer4.png";
+	images[4] = "offer1.png";
+
+	var i = 0;
+	setInterval(fadeDivs, 3000);
+
+	function fadeDivs() {
+		i = i < images.length ? i : 0;
+		$('.offerSection img').fadeOut(100, function(){
+			$(this).attr('src', images[i]).fadeIn(100);
+		})
+		i++;
+	}
+	
+	
+	
+	$(document).ready(function(){
+		
+		
+		$(".accountPanel").click(function(){
+			$(this).css("color", "rgb(6,170,171)");
+			
+			$(".faqAccountContainer").show();
+			$(".faqOrderContainer").hide();
+			$(".faqReturnRefundContainer").hide();
+			$(".faqPaymentContainer").hide();
+			$(".orderPanel").css("color", "black");
+			$(".returnRefundPanel").css("color", "black");
+			$(".paymentPanel").css("color", "black");
+		});
+		
+		$(".orderPanel").click(function(){
+			$(this).css("color", "rgb(6,170,171)");
+			$(".faqOrderContainer").show();
+			$(".faqAccountContainer").hide();
+			$(".faqReturnRefundContainer").hide();
+			$(".faqPaymentContainer").hide();
+			$(".accountPanel").css("color", "black");
+			$(".returnRefundPanel").css("color", "black");
+			$(".paymentPanel").css("color", "black");
+		});
+		
+		$(".returnRefundPanel").click(function(){
+			$(this).css("color", "rgb(6,170,171)");
+			$(".faqReturnRefundContainer").show();
+			$(".faqAccountContainer").hide();
+			$(".faqOrderContainer").hide();
+			$(".faqPaymentContainer").hide();
+			$(".accountPanel").css("color", "black");
+			$(".orderPanel").css("color", "black");
+			$(".paymentPanel").css("color", "black");
+		});
+		
+		$(".paymentPanel").click(function(){
+			$(this).css("color", "rgb(6,170,171)");
+			$(".faqPaymentContainer").show();
+			
+			$(".faqAccountContainer").hide();
+			$(".faqOrderContainer").hide();
+			$(".faqReturnRefundContainer").hide();
+			$(".accountPanel").css("color", "black");
+			$(".orderPanel").css("color", "black");
+			$(".returnRefundPanel").css("color", "black");
+		});
+
+		
+		$(".walkthrough").click(function(){
+			//alert("Clicked.");
+			
+			window.open("walkthrough.html");
+		});
+		
+		
+		$(".footerLinkToWalkthrough").click(function(){
+			//alert("Clicked.");
+			
+			window.open("walkthrough.html");
+		});
+		
+		$(".footerLinkToFAQ").click(function(){
+			//alert("Clicked.");
+			
+			window.open("help.html");
+		});
+		
+		$(".accordion1").click(function() {
+				//$(this).toggleClass('bolder');
+                //$('.answer1').toggle();
+				if (!$('.accordion2').css('display') == 'none') {
+					//alert('visible');
+				}else{
+					//alert('hidden');
+					$('.answer1').show();
+					$('.answer2').hide();
+					//$('.accordion2').css("font-weight", "normal");
+				}
+				
+        });
+		
+		$(".accordion2").click(function() {
+				//$(this).toggleClass('bolder');
+                //$('.answer2').toggle();
+				if (!$('.accordion1').css('display') == 'none') {
+					//alert('visible');
+				}else{
+					//alert('hidden');
+					$('.answer2').show();
+					$('.answer1').hide();
+					//$('.accordion2').css("font-weight", "normal");
+				}
+        });
+		
+		$(".accordion3").click(function() {
+				//$(this).toggleClass('bolder');
+                //$('.answer3').toggle();
+				if (!$('.accordion4').css('display') == 'none') {
+					//alert('visible');
+				}else if(!$('.accordion5').css('display') == 'none'){
+					//alert('hidden');
+					
+					//$('.accordion2').css("font-weight", "normal");
+				}else if(!$('.accordion5').css('display') == 'none'){
+				
+				}
+				else {
+				
+					$('.answer3').show();
+					$('.answer4').hide();
+					$('.answer5').hide();
+					$('.answer6').hide();
+				}
+        });
+		
+		$(".accordion4").click(function() {
+				//$(this).toggleClass('bolder');
+                //$('.answer4').toggle();
+				if (!$('.accordion5').css('display') == 'none') {
+					//alert('visible');
+				}else if(!$('.accordion6').css('display') == 'none'){
+					//alert('hidden');
+					
+					//$('.accordion2').css("font-weight", "normal");
+				}else if(!$('.accordion3').css('display') == 'none'){
+				
+				}
+				else {
+				
+					$('.answer4').show();
+					$('.answer3').hide();
+					$('.answer5').hide();
+					$('.answer6').hide();
+				}
+        });
+		
+		$(".accordion5").click(function() {
+				//$(this).toggleClass('bolder');
+                //$('.answer5').toggle();
+				if (!$('.accordion6').css('display') == 'none') {
+					//alert('visible');
+				}else if(!$('.accordion3').css('display') == 'none'){
+					//alert('hidden');
+					
+					//$('.accordion2').css("font-weight", "normal");
+				}else if(!$('.accordion4').css('display') == 'none'){
+				
+				}
+				else {
+				
+					$('.answer5').show();
+					$('.answer3').hide();
+					$('.answer4').hide();
+					$('.answer6').hide();
+				}
+        });
+		
+		$(".accordion6").click(function() {
+				//$(this).toggleClass('bolder');
+                //$('.answer6').toggle();
+				if (!$('.accordion3').css('display') == 'none') {
+					//alert('visible');
+				}else if(!$('.accordion4').css('display') == 'none'){
+					//alert('hidden');
+					
+					//$('.accordion2').css("font-weight", "normal");
+				}else if(!$('.accordion5').css('display') == 'none'){
+				
+				}
+				else {
+				
+					$('.answer6').show();
+					$('.answer3').hide();
+					$('.answer4').hide();
+					$('.answer5').hide();
+				}
+        });
+		
+		$(".accordion7").click(function() {
+				//$(this).toggleClass('bolder');
+                //$('.answer7').toggle();
+				if (!$('.accordion8').css('display') == 'none') {
+					//alert('visible');
+				}else{
+					//alert('hidden');
+					$('.answer7').show();
+					$('.answer8').hide();
+					//$('.accordion2').css("font-weight", "normal");
+				}
+        });
+		
+		$(".accordion8").click(function() {
+				//$(this).toggleClass('bolder');
+                //$('.answer8').toggle();
+				if (!$('.accordion7').css('display') == 'none') {
+					//alert('visible');
+				}else{
+					//alert('hidden');
+					$('.answer8').show();
+					$('.answer7').hide();
+					//$('.accordion2').css("font-weight", "normal");
+				}
+        });
+		
+		$(".accordion9").click(function() {
+				$(this).toggleClass('bolder');
+                $('.answer9').toggle();
+        });
+		
+		$(".accordion10").click(function() {
+				$(this).toggleClass('bolder');
+                $('.answer10').toggle();
+        });
+		
+		$(".accordion11").click(function() {
+				//$(this).toggleClass('bolder');
+                //$('.answer11').toggle();
+				if (!$('.accordion12').css('display') == 'none') {
+					//alert('visible');
+				}else if(!$('.accordion13').css('display') == 'none'){
+					//alert('hidden');
+					
+					//$('.accordion2').css("font-weight", "normal");
+				}else {
+				
+					$('.answer11').show();
+					$('.answer12').hide();
+					$('.answer13').hide();
+				}
+				
+				
+        });
+		
+		$(".accordion12").click(function() {
+				//$(this).toggleClass('bolder');
+                //$('.answer12').toggle();
+				if (!$('.accordion11').css('display') == 'none') {
+					//alert('visible');
+				}else if(!$('.accordion13').css('display') == 'none'){
+					//alert('hidden');
+					
+					//$('.accordion2').css("font-weight", "normal");
+				}else {
+				
+					$('.answer12').show();
+					$('.answer11').hide();
+					$('.answer13').hide();
+				}
+				
+        });
+		
+		$(".accordion13").click(function() {
+				
+				//$(this).toggleClass('bolder');
+                //$('.answer13').toggle();
+				//$('.answer12').siblings(':visible').hide();
+				if (!$('.accordion11').css('display') == 'none') {
+					//alert('visible');
+				}else if(!$('.accordion12').css('display') == 'none'){
+					//alert('hidden');
+					
+					//$('.accordion2').css("font-weight", "normal");
+				}else {
+				
+					$('.answer13').show();
+					$('.answer11').hide();
+					$('.answer12').hide();
+				}
+				
+        });
+	});	
+	
+	
+  </script>
+  <style>
+  .answer1,.answer2,.answer3,.answer4,.answer5,.answer6,.answer7,.answer8,.answer9,.answer10,.answer11,.answer12,.answer13{
+  display:none;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .bolder{
+    font-weight:Bold;
+  }
+  .logo-small {
+      color: #000000;
+      font-size: 50px;
+  }
+  .logo {
+      color: #000000;
+      font-size: 200px;
+  }
+
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: rgb(6,170,171);
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 1px;
+      border-radius: 0;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #2F4F4F !important;
+      background-color: rgb(197,224,180) !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  .navbar-header {
+	width:450px;
+  }
+  .rcorners {
+    border-radius: 2px 2px 2px 2px;
+    //border: 2px solid rgb(6,170,171);
+	
+	border-right-style: hidden;
+	border-left-style: hidden;
+	
+    //padding: 20px;
+    margin-top: 10%;
+    //height: 1550px;
+	width: 90%;
+    margin: 0 auto; 
+	background-color: #ffffff;
+  }
+  .midPanel {
+    border-radius: 2px 2px 2px 2px;
+    //border: 2px solid rgb(6,170,171);
+	
+	//border-right-style: hidden;
+	//border-left-style: hidden;
+	
+    //padding: 20px;
+    margin-top: 200px;
+    height: //500px;
+	width: 100%;
+    margin: 0 auto; 
+	background-color: #ffffff;
+  }
+  .topicHead{
+	width: 100%;
+	height: 10%;
+	background-color: rgb(6,170,171);
+	
+  }
+  .sectionHeader{
+	margin-top: 10px;
+	margin-left: 5%;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+  }
+  .tab{
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	line-height:50px;
+	letter-spacing: 1px;
+	
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+  }
+  .trackSection{
+	width:90%;
+	margin-top:5%;
+	padding:10px;
+	border-radius: 4px 4px 4px 4px;
+    //border: 2px solid rgb(6,170,171);
+	//background-color: rgb(237,237,237);
+	
+  }
+  .offerSection{
+	width:90%;
+	height:205px;
+	margin-top:3%;
+	
+	padding:10px;
+	border-radius: 4px 4px 4px 4px;
+    //border: 2px solid rgb(6,170,171);
+	//background-color: rgb(237,237,237);
+  }
+  .btnSubmit{
+	background-color: rgb(6,170,171);
+	border: none;
+	display:block;
+    margin: 0 auto;
+  }
+  .btnSubmit:hover{
+	background-color: rgb(197,224,180) !important;
+	color: #2F4F4F !important;
+	border: none;
+  }
+  .badge{
+	background-color: white;
+	color: rgb(6,170,171);
+  }
+  //.badge:hover{
+	//background-color: #2F4F4F !important;
+	//color: white;
+  //}
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+	  
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 300px;
+    }
+  }
+  input[type='text']
+{
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+	border: 1px solid #CCC;
+	padding: 8px;
+	font-weight: 200;
+	font-size: 15px;
+	font-family: 'Arial', sans-serif; 
+	box-shadow: 1px 1px 5px #CCC;
+	position:relative;
+	z-index: 2;
+	margin: 0 auto;	
+}
+
+input[type='text']:hover
+{
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+	border: 1px solid #aaa;
+	padding: 8px;
+	font-weight: 200;
+	font-size: 15px;
+	font-family: 'Arial', sans-serif; 
+	box-shadow: 1px 1px 5px #CCC;
+	position:relative;
+	z-index: 2;
+	margin: 0 auto;	
+}
+
+.todaysDeals, .bestSeller{
+	width: 90%;
+	height: 180px;
+	position:relative;
+	z-index: 2;
+	margin: 0 auto;	
+	border-radius: 5px;
+    //border: 2px solid rgb(6,170,171);
+	background-color: rgb(237,237,237);
+}
+.textHead{
+	float: left;
+	width: 15%;
+	margin-left: 5px;
+	margin-top: 5px;
+}.searchBox {
+    float: left;
+	width: 75%;
+	margin-left: 5px;
+	margin-top: 5px;
+	text-align: center;
+}
+.searchBtn{
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+	
+}
+.clearfix{
+    clear:both;
+}
+.firstContainer{
+	//background-color: rgb(237,237,237);
+	border-radius:2px;
+	width:90%;
+	height: 50px;
+	margin-left:15%;
+	clear:both;
+}
+.secondContainer{
+	background-color: rgb(237,237,237);
+	border-radius:2px;
+	height: 50px;
+	width: 90%;
+	padding: 15px;
+	
+  vertical-align: middle;
+	
+}
+.oPimg{
+	display:block;
+    margin:auto;
+	vertical-align: middle;
+ 
+}
+.left { float: left;  }
+.page-header, hr {
+	margin-top: 0;
+    margin-bottom: 0;
+}
+.faqs,.walkthrough{padding:25px;}
+
+button, .acc{
+	 background-color: white !important;
+}
+button.acc {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.acc.active, button.acc:hover {
+    background-color: #f6f6f6 !important;
+}
+
+button.acc:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.acc.active:after {
+    content: "\2796";
+}
+
+div.pan {
+    padding: 0 10px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.pan.show {
+    opacity: 1;
+    max-height: 500px;
+}
+.walkthrough,.footerLinkToWalkthrough,.footerLinkToFAQ{
+	cursor: pointer;
+}
+.walkthrough:hover{
+	cursor: pointer;
+	background-image: url("walkthrough-hover.png");
+}
+
+.faqOrderContainer, .faqReturnRefundContainer, .faqPaymentContainer{
+	
+	padding-top:10px;
+	display:none;
+}
+.que{
+	color: rgb(53, 93, 162);
+	font-family:Segoe UI;
+	font-weight:bold;
+	font-size:16px;
+	cursor: pointer;
+}
+.que:hover{
+	text-decoration:underline;
+	color:rgb(6,170,171);
+}
+.answer{
+	
+	font-family:Segoe UI;
+	font-size:15px;
+	cursor: pointer;
+
+}
+.accountPanel:hover, .orderPanel:hover, .returnRefundPanel:hover, .paymentPanel:hover{ 
+    font-weight: bold;
+	color:rgb(6,170,171);
+	cursor: pointer;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" class="bg-grey">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+	  <a class="navbar-brand" href="../index.html" ><img src="../img/navLogo.png" alt="Boxed" style="margin-top:-15px;width:169px;height:53px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="#" data-toggle="tooltip" title="Join or Sign in to your account"><span class="glyphicon glyphicon-user"></span><b> LOG ON </b></a></li>
+		<li><a href="../index.html" data-toggle="tooltip" title="HOME" style="float:left;"><span class="glyphicon glyphicon-home" title="HOME "></span><b> HOME </b></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+<div class="rcorners" class="bg-white">
+	
+	<br/>	
+	<p style="font-family:Segoe UI;font-size:28px;padding-left:2%;"> Help Center </p><hr style="width:98%;margin-top:1px;margin-bottom:1px;">
+	
+	<br/>	
+	<div class="firstContainer bg-white" >
+				<!--<div class="textHead" >
+					<p class="sectionHeader"> Search Products </p>
+				</div>-->
+				<div class="searchBox">
+					<input type="text" id="pid" class="form-control" title="Type your query here." placeholder="Browse Help...">
+					
+				</div>
+				<div class="searchBtn">
+					<img src="img/search.png" alt="Search" height="30" width="30">
+				</div>
+				<div class="clearfix"></div>	
+	</div>
+	
+	<div class="row">
+		
+		<div class="col-md-9">
+			<div class="faqs">
+				<p style="font-family:Segoe UI;font-size:24px;"> Frequently Asked Questions </p>
+				
+				<div class="col-md-3 bg-grey leftHierarchypane" style="margin-top:10px;">
+				
+					<p style="font-family:Segoe UI;font-size:16px;" class="accountPanel"> Account </p>
+					
+					<p style="font-family:Segoe UI;font-size:16px;" class="orderPanel"> My Orders </p>
+					
+					<p style="font-family:Segoe UI;font-size:16px;" class="paymentPanel"> Payments </p>
+					
+					<p style="font-family:Segoe UI;font-size:16px;" class="returnRefundPanel"> Returns & Refunds </p>
+				
+				</div>
+				
+				<div class="col-md-9">
+				
+					<div class="midPanel changeDivContentOnHover">
+					
+						<div class="faqAccountContainer">
+							<div style="border-radius: 2px 2px 2px 2px; border: 2px solid rgb(241,241,241);margin-top:10px;">
+							<p style="font-family:Segoe UI;font-size:24px;padding-top:5px;padding-left:10px;"> Account </p> 
+							
+							<div class="que">
+								<img src="img/account.png" alt="Acccount Settings" style="float:right; width:140px; height:140px;margin-top:-120px;"/>
+							</div>
+							
+							<div class="que accordion1"> 
+								<p style="padding-top:5px;padding-left:10px;"> Why do I need to create an account to place an order?</p>
+							</div>
+							
+							<div class="answer answer1" >
+								<p style="padding-top:5px;padding-left:10px;"> Creating an account allows you to save your credit/debit card and shipping details, view your shopping history, track the status of your order etc. It also helps us recommend products based on your browsing details. </p>
+							</div>
+							
+							<div class="que accordion2"> 
+								<p style="padding-top:5px;padding-left:10px;"> What can I do with my account?</p>
+							</div>
+							
+							<div class="answer answer2" >
+								<p style="padding-top:5px;padding-left:10px;"> You can provide your feedback and ratings for the product you have received. You can also create a wishlist for yourself where you can add items for your later purchases and view recommendations that we make based on your previous purchases.</p>
+							</div>
+							
+							</div><br/>
+						
+						</div>
+						<div class="faqOrderContainer">
+							<div style="border-radius: 2px 2px 2px 2px; border: 2px solid rgb(241,241,241);">
+							<p style="font-family:Segoe UI;font-size:24px;padding-top:5px;padding-left:10px;"> My Orders </p> 
+							
+							<div class="que">
+								<img src="img/order.png" alt="Returns and Refunds" style="float:right; width:130px; height:130px;margin-top:-115px;"/>
+							</div>
+														
+							<div class="que accordion3"> 
+								<p style="padding-top:5px;padding-left:10px;"> How many items can I add to my cart?</p>
+							</div>
+							
+							<div class="answer answer3" >
+								<p style="padding-top:5px;padding-left:10px;"> You can add any number of items to your cart. <p>
+							</div>
+							
+							<div class="que accordion4"> 
+								<p style="padding-top:5px;padding-left:10px;"> What is the estimated delivery time?</p>
+							</div>
+							
+							<div class="answer answer4" >
+								<p style="padding-top:5px;padding-left:10px;"> You can expect to receive your order within 2-15 days of placing your order.<br>
+								</br> 
+								<b>Note:</b> The delivery time depends on product availability, product type and size, shipping destination, and seller’s location.</p>
+								
+							</div>
+							
+							<div class="que accordion5"> 
+								<p style="padding-top:5px;padding-left:10px;"> How do I track my order?</p>
+							</div>
+							
+							<div class="answer answer5" >
+								<p style="padding-top:5px;padding-left:10px;"> To track your order: </p>
+								<ol type="a">
+									<li>Log on to your account and go to the <b> Track Order </b> page.</li>
+									<li>Enter your <b>Tracking Id/Order Id</b> and <b>Email Id</b> and click <b>Show Details.</b> A pop-up window with your order details appears.</li>
+								</ol>
+								<p style="padding-top:5px;padding-left:10px;"> You can also track your order by providing your <b>Tracking Id/Order Id</b> and <b>Email Id </b> details in the <b>Track Order</b> section on the <b>Home </b>page. </p>	
+							
+							</div>
+							
+							<div class="que accordion6"> 
+								<p style="padding-top:5px;padding-left:10px;"> How do I cancel my order?</p>
+							</div>
+							
+							<div class="answer answer6" >
+								<p style="padding-top:5px;padding-left:10px;"> To cancel your order :</p>
+								<ol type="a">
+									<li> Log on to your account and go to the <b>My Orders</b> page. </li>
+									<li> Select the item you want to cancel, indicate the reason for cancellation and click <b>Cancel Order.</b></li>
+									</ol>
+								<p style="padding-top:5px;padding-left:10px;"> <b>Note:</b> After your cancellation request is processed, the payment will be refunded in 5 business days.</p>
+									
+								
+								
+							</div>
+							
+							
+							</div><br/>
+							
+						</div>
+						<div class="faqReturnRefundContainer">
+							<div style="border-radius: 2px 2px 2px 2px; border: 2px solid rgb(241,241,241);">
+							<p style="font-family:Segoe UI;font-size:24px;padding-top:5px;padding-left:10px;"> Returns & Refunds</p> 
+						
+							<div class="que">
+								<img src="img/retref.png" alt="Returns and Refunds" style="float:right; width:130px; height:130px;margin-top:-115px;"/>
+							</div>
+
+						
+							
+						<div class="que accordion7"> 
+								<p style="padding-top:5px;padding-left:10px;"> What is the return period policy?</p>
+							</div>
+							
+							<div class="answer answer7" >
+								<p style="padding-top:5px;padding-left:10px;"> You can return or replace an item within 15 days of receiving the ordered item.<br>
+								<br/>
+								<b>Note:</b> Return period after delivery is not applicable if the product is defective or damaged.
+								
+								
+								</p>
+							</div>
+							
+							<div class="que accordion8"> 
+								<p style="padding-top:5px;padding-left:10px;"> When will I get my refund?</p>
+							</div>
+							
+							<div class="answer answer8" >
+								<p style="padding-top:5px;padding-left:10px;"> Refunds are initiated after we have received the returned product. The amount will reflect in your account in 5 business days.
+								</p>
+							</div>
+							
+							
+							
+							</div><br/>
+						
+						</div>
+						<div class="faqPaymentContainer">
+							<div style="border-radius: 2px 2px 2px 2px; border: 2px solid rgb(241,241,241);">
+							<p style="font-family:Segoe UI;font-size:24px;padding-top:5px;padding-left:10px;"> Payments </p> 
+							
+							<div class="que">
+								<img src="img/payments.png" alt="Payments" style="float:right; width:130px; height:130px;margin-top:-135px;"/>
+							</div>
+							
+							<div class="que accordion11"> 
+								<p style="padding-top:5px;padding-left:10px;"> What methods of payment can be used?</p>
+							</div>
+							
+							<div class="answer answer11" >
+								<p style="padding-top:5px;padding-left:10px;"> You can make a payment using either your credit or debit card. You can also opt for the Cash-on-Delivery (COD) option.
+								</p>
+							</div>
+							
+							<div class="que accordion12"> 
+								<p style="padding-top:5px;padding-left:10px;"> Why is the COD option not offered in my location?</p>
+							</div>
+							
+							<div class="answer answer12" >
+								<p style="padding-top:5px;padding-left:10px;"> Availability of the COD option depends on the ability of our courier partner, delivering at your location, to accept cash as payment at the time of delivery.</p>
+							</div>
+							
+							<div class="que accordion13" > 
+								<p style="padding-top:5px;padding-left:10px;"> Why do I have to pay delivery charges?</p>
+							</div>
+							
+							<div class="answer answer13" >
+								<p style="padding-top:5px;padding-left:10px;"> Delivery charges are those charges that sellers take to deliver the product to the shipping address. <br>
+								<br/>
+								<b>Note:</b> Delivery charges vary by sellers and shipping destination.</p>
+							</div>
+							
+							</div><br/>
+						</div>
+						
+					</div>
+				
+				</div>
+				
+				
+			</div>
+		</div>	
+		
+				
+		<div class="col-md-3">
+			<div class="walkthrough">
+				
+				<p style="font-family:Segoe UI;font-size:24px;"> Walkthrough </p>
+				
+				<img src="../img/walkthrough.png" alt="walkthrough" style="margin-top:5px; width:100%;" title="Click the image to see a demo">
+				
+			</div>
+			
+		</div>
+		</div>
+	</div>
+	
+	<br/>
+	
+	<div class="row " style="background-color: rgb(220,220,220)">
+	
+		<!--<img src="img/footer.png" alt="FAQ" height="100px" style="margin: auto;display: block;" >
+		<br/>-->
+		<div style="height:5px;"></div>
+		<div class="col-md-5">
+		
+			<img src="img/navLogo.png" alt="logo" style="margin-left:45px;margin-top:-20px">
+			
+			<p style="font-family:Segoe UI;font-size:15px;margin-top:-30px;margin-left:80px;padding-right:50px;">  
+			
+				Boxed.com provides you with the latest trends in apparels, gadgets and home decor. Shop and get the best deals for anything and everything!
+			
+			</p>
+			<!--<img src="img/footercomp.png" alt="trust badge" height="48px" width="250px" style="margin-left:10%;">-->
+		</div>	
+		
+		<div class="col-md-3">
+			<p style="font-family:Segoe UI;font-size:20px;margin-bottom:5%;"> <b>Help Topics </b></p>
+				<div class="footerLinkToFAQ">
+					<img src="img/faq.png" alt="FAQ" height="48px" width="48px">
+					<p style="font-family:Segoe UI;font-size:15px;margin-bottom:5%;float:right;margin-right:75px;"> Frequently Asked Questions </p>
+				</div>
+			
+			<br/>
+				<div class="footerLinkToWalkthrough">
+					<img src="img/walkthrough-hover.png" alt="Walkthrough" height="45px" width="48px">
+					<p style="font-family:Segoe UI;font-size:15px;margin-bottom:5%;float:right;margin-right:175px;"> Walkthrough     </p>
+				</div>
+			<div style="height:5px;"></div>
+		</div>
+		
+		<div class="col-md-2">
+			<p style="font-family:Segoe UI;font-size:20px;margin-bottom:3%;"> <b>Contact Us </b></p>
+			
+			
+			<p style="font-family:Segoe UI;font-size:15px;margin-bottom:2%;margin-top:15px;"> 123, North Street <br> India - 100001 </p>
+			
+			<p style="font-family:Segoe UI;font-size:15px;margin-bottom:2%;"> &#9742; 001 - 456 - 6789 </p>
+			
+			<p style="font-family:Segoe UI;font-size:15px;margin-bottom:1%;"> &#9993; info@boxed.com </p>
+		</div>
+		
+		<div class="col-md-2">
+			<p style="font-family:Segoe UI;font-size:20px;margin-bottom:3%;"> <b>Let's Connect </b></p>
+			
+			
+			<img src="img/social.png" alt="social" height="120px">
+		</div>
+		
+		<br/>
+	</div>
+
+</div>
+
+
+
+
+</body>
+</html>
+

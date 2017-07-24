@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Assistance for Websites </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/jquery.js">
+  </script>
+  <script>
+    var images = [];
+	images[0] = "offer1.png";
+	images[1] = "offer2.png";
+	images[2] = "offer3.png";
+	images[3] = "offer5.png";
+	images[4] = "offer1.png";
+
+	var i = 0;
+	setInterval(fadeDivs, 3000);
+
+	function fadeDivs() {
+		i = i < images.length ? i : 0;
+		$('.offerSection img').fadeOut(100, function(){
+			$(this).attr('src', images[i]).fadeIn(100);
+		})
+		i++;
+	}
+	
+	$(document).ready(function(){
+		$(".itemOne").click(function(){
+			//alert("Clicked.");
+			window.location.href ="cart.html";
+		});
+		
+		$(".footerLinkToWalkthrough").click(function(){
+			//alert("Clicked.");
+			
+			window.open("walkthrough.html");
+		});
+		
+		$(".footerLinkToFAQ").click(function(){
+			//alert("Clicked.");
+			
+			window.open("help.html");
+		});
+		
+	});	
+  </script>
+  <style>
+  .footerLinkToWalkthrough,.footerLinkToFAQ{
+	cursor: pointer;
+	}
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #000000;
+      font-size: 50px;
+  }
+  .logo {
+      color: #000000;
+      font-size: 200px;
+  }
+
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: rgb(6,170,171);
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 1px;
+      border-radius: 0;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #2F4F4F !important;
+      background-color: rgb(197,224,180) !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  .navbar-header {
+	width:250px;
+  }
+  .rcorners {
+    border-radius: 2px 2px 2px 2px;
+    //border: 2px solid rgb(6,170,171);
+	
+	border-right-style: hidden;
+	border-left-style: hidden;
+	
+    //padding: 20px;
+    margin-top: 10%;
+    //height: 650px;
+	width: 90%;
+    margin: 0 auto; 
+	background-color: #ffffff;
+  }
+  
+  .topicHead{
+	width: 100%;
+	height: 10%;
+	background-color: rgb(6,170,171);
+	
+  }
+  .shopHomeFooter{
+	width: 93%;
+	height: 7%;
+	//background-color: rgb(237,237,237);
+	margin-top:10px;
+	margin-left:45px;
+	margin-right:20px;
+  }
+  .sectionHeader{
+	margin-top: 10px;
+	//margin-left: 5px;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+  }
+  .header{
+	margin-top: 10px;
+	//margin-left: 5%;
+	padding-left:5px;
+	padding-top:5px;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+	
+  }
+  .header2{
+	//margin-top: 10px;
+	//margin-left: -5%;
+	//padding-left:5px;
+	width:200px;
+	//padding-top:5px;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+	
+  }
+  
+  .tab{
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	line-height:50px;
+	letter-spacing: 1px;
+	
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+  }
+  .trackSection{
+	width:90%;
+	margin-top:2px;;
+	padding:1px;
+	border-radius: 4px 4px 4px 4px;
+    //border: 2px solid rgb(6,170,171);
+	//background-color: rgb(237,237,237);
+	
+  }
+  .offerSection{
+	width:90%;
+	height:205px;
+	margin-top:3%;
+	
+	padding:10px;
+	border-radius: 4px 4px 4px 4px;
+    //border: 2px solid rgb(6,170,171);
+	//background-color: rgb(237,237,237);
+  }
+  .btnSubmit{
+	background-color: rgb(6,170,171);
+	border: none;
+	display:block;
+    margin: 0 auto;
+  }
+  .btnSubmit:hover{
+	background-color: rgb(197,224,180) !important;
+	color: #2F4F4F !important;
+	border: none;
+  }
+  .badge{
+	background-color: white;
+	color: rgb(6,170,171);
+  }
+  //.badge:hover{
+	//background-color: #2F4F4F !important;
+	//color: white;
+  //}
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+	  
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 300px;
+    }
+  }
+  input[type='text']
+{
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+	border: 1px solid #CCC;
+	padding: 8px;
+	font-weight: 200;
+	font-size: 15px;
+	font-family: 'Arial', sans-serif; 
+	box-shadow: 1px 1px 5px #CCC;
+	position:relative;
+	z-index: 2;
+	margin: 0 auto;	
+}
+
+input[type='text']:hover
+{
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+	border: 1px solid #aaa;
+	padding: 8px;
+	font-weight: 200;
+	font-size: 15px;
+	font-family: 'Arial', sans-serif; 
+	box-shadow: 1px 1px 5px #CCC;
+	position:relative;
+	z-index: 2;
+	margin: 0 auto;	
+}
+
+.todaysDeals, .bestSeller{
+	width: 90%;
+	height: 180px;
+	position:relative;
+	z-index: 2;
+	margin: 0 auto;	
+	//border-radius: 5px;
+    //border: 2px solid rgb(6,170,171);
+	//background-color: rgb(237,237,237);
+}
+.textHead{
+	float: left;
+	width: 15%;
+	margin-left: 5px;
+	margin-top: 5px;
+}.searchBox {
+    float: left;
+	width: 75%;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.searchBtn{
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+	
+}
+.clearfix{
+    clear:both;
+}
+.firstContainer{
+	//background-color: rgb(237,237,237);
+	border-radius:2px;
+	width:90%;
+	height: 50px;
+	margin-left:40px;
+	clear:both;
+}
+.secondContainer{
+	//background-color: rgb(237,237,237);
+	border-radius:2px;
+	height: 50px;
+	width: 90%;
+	padding: 15px;
+	
+  vertical-align: middle;
+	
+}
+.headerContainer{
+	//background-color: rgb(237,237,237);
+	border-radius:2px;
+	height: 40px;
+	width: 90%;
+	//padding: 15px;
+	margin-left:40px;
+  vertical-align: middle;
+	
+}
+
+.oPimg{
+	display:block;
+    margin:auto;
+	vertical-align: middle;
+ 
+}
+.itemOne{
+	cursor: pointer;
+}
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" class="bg-grey">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a class="navbar-brand" href="#myPage">Boxed.com <img src="logo-boxed.png" alt="Boxed" style="margin-top:-24px;margin-left: 125px;width:20px;height:20px;"></a>-->
+	  <a class="navbar-brand" href="../index.html" ><img src="img/navLogo.png" alt="Boxed" style="margin-top:-15px;width:169px;height:53px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="#" data-toggle="tooltip" title="Join or Sign in to your account"><span class="glyphicon glyphicon-user"></span><b> LOG ON </b></a></li>
+		<li><a href="../index.html" data-toggle="tooltip" title="HOME" style="float:left;"><span class="glyphicon glyphicon-home" title="HOME "></span><b> HOME </b></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+<div class="rcorners" class="bg-white">
+	<!--
+	<div class="topicHead"> 
+		<p class="tab"> HOME </p>
+	
+	</div>
+	-->
+	<br/>
+	
+	<div class="row">
+	
+		<p style="font-family:Segoe UI;font-size:28px;margin-left:40px;"> Shipment Tracking </p><hr style="margin-top:1px;margin-bottom:1px;width:95%;">
+		<div class="col-md-5">
+		
+			<div style="padding:15px;">
+				
+					
+				<div class="trackSection">
+					<p style="margin-left:10px;"> Get detailed updates of your order.  </p> <br>
+					<input type="text" id="tid" class="form-control" title="Tracking ID is the order number you get after placing the order." placeholder="Enter your Tracking Id" style="width:60%;">
+					<br/>
+					<input type="text" id="eid" class="form-control" title="Enter your email ID here. You will get order details on this email address." placeholder="Enter your Email Id" style="width:60%;">
+					<br/>
+					<button class="btn btn-xs btnSubmit"><b><span class="glyphicon glyphicon-send"></span>  SHOW DETAILS</b></button>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+		</div>	
+		<div class="col-md-7">
+		
+			<br/>
+			<p><b>To know your Tracking Id,</b> Please check your order number in the confirmation mail or sms.</p>
+			<img src="img/order-num-mag.png" class="img-responsive center-block" alt="" style="padding:15px; width:80%;">
+			
+		</div>
+		</div>
+		
+		<br/>
+	</div>
+	
+	<br/>
+	<!--
+	<div class="row " style="height:200px; background-color: rgb(220,220,220)">
+	
+		
+		<div style="height:5px;"></div>
+		<div class="col-md-5">
+		
+			<img src="img/navLogo.png" alt="logo" style="margin-left:45px;margin-top:-20px">
+			
+			<p style="font-family:Segoe UI;font-size:15px;margin-top:-30px;margin-left:80px;padding-right:50px;">  
+			
+				Boxed.com provides you with the latest trends in apparels, gadgets and home decor. Shop and get the best deals for anything and everything!
+			
+			</p>
+			
+		</div>	
+		
+		<div class="col-md-3">
+			<p style="font-family:Segoe UI;font-size:20px;margin-bottom:5%;"> <b>Help Topics </b></p>
+				<div class="footerLinkToFAQ">
+					<img src="img/faq.png" alt="FAQ" height="48px" width="48px">
+					<p style="font-family:Segoe UI;font-size:15px;margin-bottom:5%;float:right;margin-right:75px;"> Frequently Asked Questions </p>
+				</div>
+			
+			<br/>
+				<div class="footerLinkToWalkthrough">
+					<img src="img/walkthrough-hover.png" alt="Walkthrough" height="45px" width="48px">
+					<p style="font-family:Segoe UI;font-size:15px;margin-bottom:5%;float:right;margin-right:175px;"> Walkthrough     </p>
+				</div>
+			<div style="height:5px;"></div>
+		</div>
+		
+		<div class="col-md-2">
+			<p style="font-family:Segoe UI;font-size:20px;margin-bottom:3%;"> <b>Contact Us </b></p>
+			
+			
+			<p style="font-family:Segoe UI;font-size:15px;margin-bottom:2%;margin-top:15px;"> 123, North Street <br> India - 100001 </p>
+			
+			<p style="font-family:Segoe UI;font-size:15px;margin-bottom:2%;"> &#9742; 001 - 456 - 6789 </p>
+			
+			<p style="font-family:Segoe UI;font-size:15px;margin-bottom:1%;"> &#9993; info@boxed.com </p>
+		</div>
+		
+		<div class="col-md-2">
+			<p style="font-family:Segoe UI;font-size:20px;margin-bottom:3%;"> <b>Let's Connect </b></p>
+			
+			
+			<img src="img/social.png" alt="social" height="120px">
+		</div>
+		
+		<br/>
+		
+	</div>
+	-->
+</div>
+
+
+
+
+</body>
+</html>
+

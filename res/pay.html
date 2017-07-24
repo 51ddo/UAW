@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Assistance for Websites </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/jquery.js">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+  </script>
+  <script>
+    var images = [];
+	images[0] = "offer1.png";
+	images[1] = "offer2.png";
+	images[2] = "offer3.png";
+	images[3] = "offer4.png";
+	images[4] = "offer1.png";
+
+	var i = 0;
+	setInterval(fadeDivs, 3000);
+
+	function fadeDivs() {
+		i = i < images.length ? i : 0;
+		$('.offerSection img').fadeOut(100, function(){
+			$(this).attr('src', images[i]).fadeIn(100);
+		})
+		i++;
+	}
+	
+	
+	$(document).ready(function(){
+		$(".addToCart").click(function(){
+			//alert("Clicked.");
+			window.location.href ="confirmation.html";
+			//$(".itemDescription").css("display", "none");
+			//$(".processTab").text("PAYMENT");
+			//$(".payMent").show();
+		});
+		
+		$(".cardTypeImg").click(function(){
+		
+			$(".cardDetails").show();
+		
+		});
+		
+		
+		
+	});	
+	
+	$(function() { // at dom ready
+		$('input.ccrb').change(function() { // on radio's change event
+		//$('.buttons-to-hide-class').hide(); // hide buttons
+		$('.cardSection').show(); // show desired button
+		
+		});
+		
+		$('input.dcrb').change(function() { // on radio's change event
+		//$('.buttons-to-hide-class').hide(); // hide buttons
+		$('.cardSection').show(); // show desired button
+		});
+		
+		$('input.cod').change(function() { // on radio's change event
+		//$('.buttons-to-hide-class').hide(); // hide buttons
+		//$('#button-to-show-id').show(); // show desired button
+		//alert("click");
+		//	$('.cardTran').hide();
+			
+		});
+		
+		
+		
+		
+		
+	});
+	
+	
+  
+	
+	
+  </script>
+  <style>
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #000000;
+      font-size: 50px;
+  }
+  .logo {
+      color: #000000;
+      font-size: 200px;
+  }
+
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: rgb(6,170,171);
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+     // border: 1px solid #333;
+      background-color: rgb(197,224,180) !important;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: rgb(6,170,171);
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 1px;
+      border-radius: 0;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #2F4F4F !important;
+      background-color: rgb(197,224,180) !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  .navbar-header {
+	width:250px;
+  }
+  .rcorners {
+    border-radius: 2px 2px 2px 2px;
+    border: 2px solid rgb(6,170,171);
+	
+	border-right-style: hidden;
+	border-left-style: hidden;
+	
+    //padding: 20px;
+    margin-top: 10%;
+    height: 570px;
+	width: 90%;
+    margin: 0 auto; 
+	background-color: #ffffff;
+  }
+  .cardSection{
+	//border-radius: 2px 2px 2px 2px;
+    //border: 2px solid rgb(6,170,171);
+	
+	border-right-style: hidden;
+	border-left-style: hidden;
+	display:none;
+    //padding: 20px;
+    margin-top: 20px;
+    height: 250px;
+	width: 90%;
+   // margin: 0 auto; 
+   margin-left:20px;
+	background-color: #ffffff;
+  
+  }
+  .cardDetails{
+  margin-top:10px;
+  margin-left:5px;
+  border-radius: 4px 4px 4px 4px;
+  //background-color:bg-grey;
+  height:100px;
+  display:none;
+  }
+  
+  .topicHead{
+	width: 100%;
+	height: 10%;
+	
+	background-color: rgb(6,170,171);
+	
+  }
+  .sectionHeader{
+	margin-top: 10px;
+	margin-left: 5%;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+  }
+  .tab{
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	line-height:50px;
+	letter-spacing: 1px;
+	
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+  }
+  .trackSection{
+	width:90%;
+	margin-top:5%;
+	padding:10px;
+	border-radius: 4px 4px 4px 4px;
+    //border: 2px solid rgb(6,170,171);
+	//background-color: rgb(237,237,237);
+	
+  }
+  .offerSection{
+	width:90%;
+	height:205px;
+	margin-top:3%;
+	
+	padding:10px;
+	border-radius: 4px 4px 4px 4px;
+    //border: 2px solid rgb(6,170,171);
+	//background-color: rgb(237,237,237);
+  }
+  .btnSubmit{
+	background-color: rgb(6,170,171);
+	border: none;
+	display:block;
+    margin: 0 auto;
+  }
+  .btnSubmit:hover{
+	background-color: rgb(197,224,180) !important;
+	color: #2F4F4F !important;
+	border: none;
+  }
+  .badge{
+	background-color: white;
+	color: rgb(6,170,171);
+  }
+  //.badge:hover{
+	//background-color: #2F4F4F !important;
+	//color: white;
+  //}
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+	  
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 300px;
+    }
+  }
+  input[type='text']
+{
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+	border: 1px solid #CCC;
+	padding: 8px;
+	font-weight: 200;
+	font-size: 15px;
+	font-family: 'Corbel', sans-serif; 
+	box-shadow: 1px 1px 5px #CCC;
+	position:relative;
+	z-index: 2;
+	margin: 0 auto;	
+}
+
+input[type='text']:hover
+{
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+	border: 1px solid #aaa;
+	padding: 8px;
+	font-weight: 200;
+	font-size: 15px;
+	font-family: 'Corbel', sans-serif; 
+	box-shadow: 1px 1px 5px #CCC;
+	position:relative;
+	z-index: 2;
+	margin: 0 auto;	
+}
+
+.todaysDeals, .bestSeller{
+	width: 90%;
+	height: 180px;
+	position:relative;
+	z-index: 2;
+	margin: 0 auto;	
+	border-radius: 5px;
+    //border: 2px solid rgb(6,170,171);
+	background-color: rgb(237,237,237);
+}
+.textHead{
+	float: left;
+	width: 15%;
+	margin-left: 5px;
+	margin-top: 5px;
+}.searchBox {
+    float: left;
+	width: 75%;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.searchBtn{
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+	
+}
+.clearfix{
+    clear:both;
+}
+.firstContainer{
+	background-color: rgb(237,237,237);
+	border-radius:2px;
+	width:90%;
+	height: 50px;
+	margin-left:45px;
+	clear:both;
+}
+.secondContainer{
+	background-color: rgb(237,237,237);
+	border-radius:2px;
+	height: 50px;
+	width: 90%;
+	padding: 15px;
+	
+  vertical-align: middle;
+	
+}
+.oPimg{
+	display:block;
+    margin:auto;
+	vertical-align: middle;
+ 
+}
+
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" class="bg-grey">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a class="navbar-brand" href="#myPage">Boxed.com <img src="logo-boxed.png" alt="Boxed" style="margin-top:-24px;margin-left: 125px;width:20px;height:20px;"></a>-->
+	  <a class="navbar-brand" href="../index.html" ><img src="img/navLogo.png" alt="Boxed" style="margin-top:-15px;width:169px;height:53px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="track.html" data-toggle="tooltip" title="Track the status of your order"><span class="glyphicon glyphicon-map-marker" ></span><b> TRACK </b></a></li>
+        <li><a href="#" data-toggle="tooltip" title="View your cart"><span class="glyphicon glyphicon-shopping-cart"></span><b> CART </b><span class="badge"> 1 </span></a></li>
+        
+        
+        <!--<li><a href="#" data-toggle="tooltip" title="Join or Sign in to your account"><span class="glyphicon glyphicon-user"></span><b> LOG ON </b></a></li>-->
+		
+		<li><a href="help.html" data-toggle="tooltip" title="Find assistance"><span class="glyphicon glyphicon-book" title="Find assistance "></span><b> HELP </b></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+<div class="rcorners" class="bg-white">
+	<div class="topicHead"> 
+		<p class="tab processTab"> PAY </p>
+	
+	</div>
+	
+	<br/>
+		<div class="payMent">
+			<div class="row">
+				<div class="col-md-8">
+					
+						<!--<p>SEARCH PRODUCTS</p>-->
+						<p style="font-family:Segoe UI;font-size:28px;padding-left:20px;"> Payment Options </p><hr style="margin-left:20px;width:90%;margin-top:0px;">
+						<div style="margin-left:20px;padding-left:10px;;">
+						<div class="cardTran">
+							<div class="radio ">
+							  <label title="Click the radio button to select this option." style="font-family:Segoe UI;font-size:16px;"><input title="Click the radio button to select this option." type="radio" name="optradio" class="ccrb">Credit Card</label>
+							</div>
+							<div style="height:5px;"></div>
+							<div class="radio ">
+							  <label title="Click the radio button to select this option." style="font-family:Segoe UI;font-size:16px;"><input title="Click the radio button to select this option." type="radio" name="optradio" class="dcrb">Debit Card</label>
+							</div>
+						</div>	
+							<div style="height:5px"></div>
+							<div class="radio ">
+							  <label title="Click the radio button to select this option." style="font-family:Segoe UI;font-size:16px;"><input title="Click the radio button to select this option." type="radio" name="optradio" class="cod">Cash On Delivery</label>
+							</div>
+
+					</div>
+					<br>
+					<hr style="margin-left:20px;width:90%;margin-top:0px;">
+					
+					<div class="cardSection">
+						<p style="font-family:Segoe UI;font-size:17px;padding-left:20px;"> Select Card Type: </p><hr style="margin-left:20px;width:200px;margin-top:0px;">
+						<img src="../img/cardType.png" alt="Boxed" style="margin-top:-1px;width:200px;height:40px;margin-left:20px;" class="cardTypeImg" title="Select the type of card you want to use.
+">
+						
+						<div class="row cardDetails bg-grey" >
+						  <div class="col-sm-4 ">
+							<div class="fieldOne">
+								
+								<p style="font-size:12px;color:grey;font-weight:bold;padding-top:10px;">Name on the Card</p>
+								<input type="text" id="nameoncard" class="form-control" title="Type your name as it appears on your card." >
+								
+							</div>	
+						  </div>
+						  <div class="col-sm-3 fieldTwo">
+							
+							<p style="font-size:12px;color:grey;font-weight:bold;padding-top:10px;">Card Number</p>
+							<input type="text" id="cardoncard" class="form-control" title="Type your card number.">
+							
+						  
+						  </div>
+						  <div class="col-sm-3 fieldThree">
+							
+							<p style="font-size:12px;color:grey;font-weight:bold;padding-top:10px;">Expiration Date </p>
+							<div class="col-sm-6" style="margin-left:-15px;">
+							<div class="dropup" >
+								<button class="btn btn-default dropdown-toggle" title="Use the down arrow to select the expiration date of your card." type="button" id="menu1" data-toggle="dropdown" >MM
+								<span class="caret" ></span></button>
+								<ul class="dropdown-menu " role="menu" aria-labelledby="menu1" >
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">01</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">02</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">03</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">04</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">05</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">06</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">07</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">08</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">09</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">10</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">11</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">12</a></li>
+								</ul>
+								
+								</div>
+								
+							</div>
+							<div class="col-sm-6" style="margin-left:10px;">
+							<div class="dropup" >
+								
+								
+								<button class="btn btn-default dropdown-toggle" title="Use the down arrow to select the expiration date of your card." type="button" id="menu1" data-toggle="dropdown" >YY
+								<span class="caret" ></span></button>
+								<ul class="dropdown-menu " role="menu" aria-labelledby="menu1" >
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">16</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">17</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">18</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">19</a></li>
+								  <li  role="presentation"><a role="menuitem" tabindex="-1" href="#">20</a></li>
+								  
+								</ul>
+								</div>
+							</div>
+							
+							
+							
+						  </div>
+						  <div class="col-sm-2 fieldFour">
+							
+							<p style="font-size:12px;color:grey;font-weight:bold;padding-top:10px;">CVV</p>
+							<input type="text" id="cardoncard" class="form-control" title="Type the CVV number from your card.">
+						  
+						  </div>
+						</div>
+						
+					</div>
+					
+				</div>	
+				
+				
+				
+				<div class="col-md-4">
+					<p style="font-family:Segoe UI;font-size:28px;padding-left:20px;"> Cart Summary </p><hr style="margin-left:20px;margin-top:0px;width:90%;">	
+					
+					<div class="row">
+				  <div class="col-sm-7 ">
+					<div class="itemOne">
+						
+						<p style="font-size:14px;color:grey;font-weight:bold;margin-left:20px;padding-top:10px;">Ringo Yellow V-Neck T-Shirt</p>
+						<br>
+						<p style="font-size:14px;color:grey;font-weight:bold;margin-left:20px;padding-top:10px;">*Shipping Charges</p>
+						<br><br>
+						<p style="font-size:14px;color:red;font-weight:bold;margin-left:20px;padding-top:10px;">Total</p>
+					</div>	
+				  </div>
+				  <div class="col-sm-2 itemTwo">
+					
+					<p style="font-size:14px;color:grey;font-weight:bold;margin-left:px;padding-top:10px;">x 1</p>
+					<br>
+					<p style="font-size:14px;color:grey;font-weight:bold;margin-left:px;padding-top:10px;">+ </p>
+				  
+				  </div>
+				  <div class="col-sm-3 itemThree">
+					
+					
+					<p style="font-size:14px;color:grey;font-weight:bold;padding-top:10px;">Rs. 384</p>
+					<br>
+					<p style="font-size:14px;color:grey;font-weight:bold;padding-top:10px;">Rs. 500</p>
+					<br><br>
+					<p style="font-size:14px;color:grey;font-weight:bold;padding-top:10px;">Rs. 884</p>
+					
+				  </div>
+				  
+				</div>
+					
+					
+					
+					
+					<br/>
+					<br/>
+					
+					<button type="button" title="Click to PLACE YOUR ORDER and complete the payment." class="btn btn-lg btn-block addToCart " style="width:90%; margin-left:20px;">PLACE ORDER</button>
+				</div>
+			</div>
+		</div>	
+		
+		
+		
+		<div class="orderDetails">
+		
+		
+		
+		</div>
+</div>
+
+
+
+
+</body>
+</html>
+
